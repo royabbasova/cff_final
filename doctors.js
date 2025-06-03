@@ -1,11 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-});
 
 
 document.querySelectorAll('.doctor-card').forEach(card => {
@@ -81,3 +73,16 @@ document.querySelectorAll('.doctor-card').forEach(card => {
     };
 });
 
+document.querySelectorAll('a').forEach(link => {
+    if (
+        link.textContent.trim().toLowerCase() === 'contact us' 
+    ) {
+        link.addEventListener('click', function(e) {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                e.preventDefault();
+                footer.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});

@@ -1,7 +1,3 @@
-document.querySelector('.menu-toggle').onclick = function () {
-    document.querySelector('.nav-links').classList.toggle('active');
-}
-
 document.querySelectorAll('.nav-links a, .hero .btn').forEach(link => {
     link.addEventListener('click', function (e) {
         if (this.textContent.trim() === 'Contact Us') {

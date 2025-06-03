@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hospital details</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -27,15 +29,20 @@
     <main>
         <div class="container">
             <div class="hospital-breadcrumb" style="margin-top:2rem;margin-bottom:1.2rem;">
-                <a href="hospitals.html">Hospitals</a> &nbsp;›&nbsp; <span class="active" style="color:#1ca7a7;">Referans Clinic</span>
+                <a href="hospitals.html">Hospitals</a> &nbsp;›&nbsp; <span class="active"
+                    style="color:#1ca7a7;">Referans Clinic</span>
             </div>
             <div class="hospital-detail-row">
                 <div class="hospital-detail-info">
                     <h1 class="hospital-detail-title">Referans Clinic</h1>
                     <div class="hospital-detail-desc">
-                        We collaborate with world-class hospitals to provide you with access to the best medical care available.<br>
-                        Our reference hospitals are internationally accredited, equipped with cutting-edge technology, and staffed by highly experienced medical professionals.<br>
-                        Whether you need specialized treatment, advanced surgeries, or expert consultations, our partner hospitals ensure the highest standards of healthcare. From cardiology and oncology to neurology and orthopedics, these institutions are at the forefront of medical innovation and patient care.
+                        We collaborate with world-class hospitals to provide you with access to the best medical care
+                        available.<br>
+                        Our reference hospitals are internationally accredited, equipped with cutting-edge technology,
+                        and staffed by highly experienced medical professionals.<br>
+                        Whether you need specialized treatment, advanced surgeries, or expert consultations, our partner
+                        hospitals ensure the highest standards of healthcare. From cardiology and oncology to neurology
+                        and orthopedics, these institutions are at the forefront of medical innovation and patient care.
                     </div>
                 </div>
                 <div class="hospital-detail-gallery">
@@ -95,6 +102,21 @@
             </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            if (
+                link.textContent.trim().toLowerCase() === 'contact us'
+            ) {
+                link.addEventListener('click', function (e) {
+                    const footer = document.querySelector('footer');
+                    if (footer) {
+                        e.preventDefault();
+                        footer.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
