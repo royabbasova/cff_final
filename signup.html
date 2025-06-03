@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="signup-wrapper">
+    <div class="signup-left">
+        <img src="./images/logo.svg" alt="Logo" class="signup-logo" />
+        <div class="signup-welcome">
+            <h2>Welcome back!</h2>
+            <p>We're happy to have you back! Let's get started.</p>
+            <a href="login.html" class="signup-login-btn">Log in</a>
+        </div>
+    </div>
+    <div class="signup-right">
+        <form class="signup-form">
+            <h2 class="signup-title">Create Account</h2>
+            <input type="text" placeholder="First name" required>
+            <input type="text" placeholder="Last name" required>
+            <input type="date" placeholder="Date of birth" required>
+            <input type="text" placeholder="FIN code" required>
+            <input type="email" placeholder="Email address" required>
+            <div class="signup-phone-row">
+                <select>
+                    <option>+994</option>
+                </select>
+                <input type="tel" placeholder="Phone number" required>
+            </div>
+            <div class="signup-password-row">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="signup-password-row">
+                <input type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="signup-remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <div class="signup-actions">
+                <button type="button" class="signup-cancel">Cancel</button>
+                <button type="submit" class="signup-submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>
